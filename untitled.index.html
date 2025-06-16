@@ -1,0 +1,56 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The Button Trap</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background-color: #f0f0f0;
+      font-family: sans-serif;
+    }
+
+    .text {
+      text-align: center;
+      margin-bottom: 80px;
+      font-size: 24px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .circle {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .cow {
+      display: none;
+      width: 150px;
+    }
+  </style>
+</head>
+<body>
+  <div class="text" id="text">don't put the button</div>
+
+  <div class="circle" id="circle" onclick="explode()"></div>
+
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Cow_female_black_white.jpg/320px-Cow_female_black_white.jpg" class="cow" id="cow" alt="cow">
+
+  <script>
+    function explode() {
+      document.getElementById("text").textContent = "i warned u";
+      document.getElementById("circle").style.display = "none";
+      document.getElementById("cow").style.display = "block";
+    }
+  </script>
+</body>
+</html>
